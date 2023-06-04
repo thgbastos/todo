@@ -16,7 +16,7 @@ class Task extends Model
         'due_date',
         'description',
         'user_id',
-        'category_id'
+        'category_id',
     ];
 
     // Relacionamento com a tabela de Usuário
