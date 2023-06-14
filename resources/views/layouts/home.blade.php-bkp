@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoApp</title>
+    <!--Font Rubik-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <!--Meu CSS-->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <img src="/assets/images/logo.png">
+        </div>
+        <div class="content">
+            <nav>
+                <a href="#" class="btn btn-primary">Criar Tarefa</a>
+            </nav>
+            <main>
+                <section class="graph">
+                    <div class="graph_header">
+                        <h3>Progresso do Dia</h3>
+                        <div class="graph_header-line"></div>
+                        <div class="graph_header-date">
+                            <img src="/assets/images/icon-prev.png">
+                                07 de Jun
+                            <img src="/assets/images/icon-next.png">
+                        </div>
+                    </div>
+                    <div class="graph_header-subtitle">Tarefas: <b>3/6</b></div>
+                    <div class="graph-placeholder"></div>
+                    <div class="task_left_footer">
+                        <img src="/assets/images/icon-info.png">
+                        Restam 3 tarefas para serem realizadas
+                    </div>
+                </section>
+
+                <section class="list"> 
+                    <div class="list_header">
+                        <select class="list_header-select" name="tarefas" id="tarefas">Tarefaas
+                            <option value="vlr1">Todas as Tarefas</option>
+                            <option value="vlr2">Minha tarefa 2</option>
+                            <option value="vlr3">Minha tarefa 3</option>
+                        </select>
+                    </div>
+
+                    <div class="task_list">
+                        <div class="task">
+                            <div class="title">
+                                <input type="checkbox" name="task" id="task">
+                                <div class="task_title">
+                                    <b>Título da Tarefa 1</b>
+                                </div>
+                            </div>
+                            <div class="priority">
+                                <div class="sphere"></div>
+                                Alta Prioridade
+                            </div>
+                            <div class="actions">
+                                <a href="#"><img src="/assets/images/icon-edit.png"></a>
+                                <a href="#"><img src="/assets/images/icon-delete.png"></a>
+                            </div>
+                        </div>
+                        
+                        <div class="task">
+                            <div class="title">
+                                <input type="checkbox" name="task" id="task">
+                                <div class="task_title">
+                                    <b>Título da Tarefa 1</b>
+                                </div>
+                            </div>
+                            <div class="priority">
+                                <div class="sphere"></div>
+                                Alta Prioridade
+                            </div>
+                            <div class="actions">
+                                <a href="#"><img src="/assets/images/icon-edit.png"></a>
+                                <a href="#"><img src="/assets/images/icon-delete.png"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+            </main>
+        </div>
+    </div>
+    
+</body>
+</html>
