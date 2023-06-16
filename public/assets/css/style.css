@@ -46,12 +46,14 @@ nav{
 }
 
 .btn{
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 10px;
     margin-right: 10px;
+    border: 0;
 }
 
 .btn:hover{
+    cursor: pointer;
     transition: all 0.4s ease-in-out;
     transform: scale(1.03);
 }
@@ -160,10 +162,11 @@ section.list{
     
 }
 .task:hover{
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease-in-out;
     border-radius: 10px;
     transform: scale(1.03);
     background-color: var(--background-light);
+    cursor: pointer;
 }
 
 .title{
@@ -193,4 +196,44 @@ section.list{
     border-radius: 50%;
     background-color: red;
     margin-right: 10px;
+}
+
+/* Task Page Form */
+#task_section{
+    margin: auto;
+    margin-top: 20px;
+}
+
+#task_section>h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputArea{
+    display: block;
+    margin: 15px;
+}
+.inputArea>label{
+    display: block;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+.inputArea>input, .inputArea>select{
+    height: 40px;
+    width: 400px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.inputArea>textarea{
+    height: 120px;
+    width: 400px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
 }
