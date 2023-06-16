@@ -15,6 +15,7 @@ class TaskSeeder extends Seeder
     {
         //
         Task::create([
+            'is_done' => false,
             'title' => 'Minha primeira tarefa',
             'due_date' => '2023-06-06 10:00:00',
             'description' => 'Descrição da minha primeira tarefa',
