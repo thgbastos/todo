@@ -13,6 +13,7 @@
         <form method="POST" action="{{route('task.edit_action')}}">
             @csrf
             <input type="hidden" value="{{$editTask->id}}" name="id"/>
+            <x-form.checkbox_input label="Tarefa Realizada?" name="is_done" id="is_done" checked="{{$editTask->is_done}}" />
             <x-form.text_input type="text" name="title" label="Título da Tarefa" required="required"  value="{{$editTask->title}}" />
             <x-form.text_input type="datetime-local" name="due_date" label="Data da Realização" required="required" value="{{$editTask->due_date}}" />
             <x-form.select_input name="category_id" label="Categoria">

@@ -36,7 +36,10 @@ class TaskController extends Controller
         return view('tasks.edit', $data);
     }
     public function edit_action(Request $request){
-        $request_data = $request->only(['title','due_date','category_id','description']);
+        $request_data = $request->only(['is_done','title','due_date','category_id','description']);
+        
+        $request_data['is_done'] = $request->is_done ? true : false;
+
         $task = Task::find($request->id);
         if (!$task) {
             $id = 1;
@@ -50,7 +53,17 @@ class TaskController extends Controller
     }
 
     public function delete(Request $request){
-        // Deleta a tarefa e volta para a Home
+        // Recebe o id que vem lista de task e se encontrar deleta ele.
+
+        $id = $request->id;
+
+        $task = Task::find($id);
+
+        if($task){
+
+            $task->delete();
+        }
+
         return redirect(route('home'));
     }
 }
